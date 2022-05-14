@@ -1,0 +1,67 @@
+
+
+.allarticle {
+    margin-top: -1rem;
+}
+
+.title {
+    text-align: center;
+}
+
+.writer {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.writeravater {
+    border-radius: 50%;
+    transform: scale(.88);
+}
+
+.publisheddate {
+    text-align: center;
+    font-family: "Inter"
+}
+
+
+.quote{
+    border-left: 1px white solid;
+    margin-left: 1rem;
+    padding-left: .5rem;
+    font-style: italic;
+}
+
+.articlemain {
+    max-width: 65%;
+    margin: 0 auto;
+    
+}
+
+.imagediv {
+    display: flex;
+    justify-content: center;
+}
+
+.articleimage {
+    width: 76%;
+}
+
+.returnhomebutton {
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.paragraph {
+    line-height: 2rem;
+    text-indent: 3rem;
+    font-family: "Inter";
+    font-weight: 300;
+}
+
+@media (max-width: 500px) {
+    .articlemain {
+        max-width: 90%;
+    }
+}

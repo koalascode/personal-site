@@ -1,0 +1,106 @@
+.header {
+    font-family: "Inter";
+    text-align: center;
+}
+
+.filterbuttoncontainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    
+}
+
+.filterbutton {
+    border: none;
+    border-radius: 10px;
+    padding: .4rem .3rem;
+}
+
+.articlepreview {
+    max-width: 38%;
+    margin-bottom: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 8px 0 rgba(44, 44, 44, 0.2);
+}
+
+.articlescontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+
+.coverimage {
+    border-radius: 15px;
+}
+
+.blogtitle {
+    text-align: center;
+    font-family: "Inter";
+    font-size: 1.75rem;
+}
+
+.blogdescription {
+    text-align: center;
+    font-family: "Open Sans";
+    padding-bottom: 1rem;
+    margin: 0 auto;
+    font-family: 1rem;
+    width: 90%;
+}
+
+.tagsflex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .7rem;
+    margin-bottom: -1rem;
+}
+
+.tag {
+    font-size: .85rem;
+    color: rgb(142, 140, 140);
+}
+
+@media (prefers-color-scheme: light) {
+    .articlepreview {
+      background-color: #f8f6f6 !important;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+
+    .articleteasertext {
+        color: rgb(49, 49, 49);
+        transition: color 500ms ease;
+        cursor: pointer;
+    }
+    
+    .articleteasertext:hover {
+        color: rgb(0, 0, 0);
+    }
+
+    .filterbutton {
+        background: none;
+    }
+  }
+
+@media (prefers-color-scheme: dark) {
+    .articlepreview {
+      background-color: #141414 !important;
+    }
+    .articleteasertext {
+        color: rgb(214, 214, 214);
+        transition: color 500ms ease;
+        cursor: pointer;
+    }
+    
+    .articleteasertext:hover {
+        color: white;
+    }
+}
+
+@media (max-width: 500px) {
+    .articlepreview {
+        max-width: 90%;
+        margin-bottom: 1rem;
+    } 
+}
