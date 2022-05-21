@@ -7,16 +7,27 @@
     display: flex;
     justify-content: center;
     margin-bottom: 1rem;
-    
+    background: none;
 }
 
 .filterbutton {
     border: none;
+    background: none;
     border-radius: 10px;
     padding: .4rem .3rem;
 }
 
+.articleteasertext {
+    color:#4e4e4e;
+    transition: color 500ms ease;
+  }
+  
+  .articleteasertext:hover {
+    color: black;
+  }
+
 .articlepreview {
+    cursor: pointer;
     max-width: 38%;
     margin-bottom: 2rem;
     border-radius: 15px;

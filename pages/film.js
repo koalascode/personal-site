@@ -41,9 +41,7 @@ export default function Film() {
                 
             </div>
                 
-            <div className={styles.photocontainer}>
-
-            </div>
+            
         </div>
     )
 }

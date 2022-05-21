@@ -13,7 +13,7 @@ export default function BlogHome({properties, allprops}) {
 
    return (
     <div className={styles.container}>
-      <title>Blog</title>
+      <title>Aaron Anidjar | Blog</title>
       <link rel="icon" href="/blogicon.png"/>
       <NavBar />
         <h1 className={styles.header}>📝 My Blog</h1>
