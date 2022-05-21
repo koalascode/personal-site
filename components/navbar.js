@@ -42,6 +42,9 @@ export default function NavBar() {
               <Link href="/" passHref>
                   <p className={styles.pagelink}>Programming</p>
               </Link>
+              <Link href="/photo" passHref>
+                  <p className={styles.pagelink}>Photography</p>
+              </Link>
               <Link href="/blog" passHref>
                   <p className={styles.pagelink}>Blog</p>
               </Link>

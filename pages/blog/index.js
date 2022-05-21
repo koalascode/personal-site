@@ -3,6 +3,7 @@ import Head from 'next/head'
 import styles from '/styles/BlogHome.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
+import NavBar from '../../components/navbar'
 
 
 export default function BlogHome({properties, allprops}) {
@@ -14,6 +15,7 @@ export default function BlogHome({properties, allprops}) {
     <div className={styles.container}>
       <title>Blog</title>
       <link rel="icon" href="/blogicon.png"/>
+      <NavBar />
         <h1 className={styles.header}>📝 My Blog</h1>
         <div className={styles.filterbuttoncontainer}>
         <form>

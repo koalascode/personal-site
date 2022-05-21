@@ -1,0 +1,21 @@
+
+
+.container {
+
+}
+
+.photocontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.image {
+    max-width: 40%;
+    height: auto;
+    /*border-radius: 10px;*/
+}
