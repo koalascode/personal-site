@@ -55,10 +55,10 @@ export async function getServerSideProps() {
     const { Client } = require("@notionhq/client")
 
     const notion = new Client({
-        auth: "secret_eEpKZQubXG2NI5glqvnvj2bVfqe3QNSFIvP8AYV5XKz", //Check whether you have the correct token in the .env.local file.
+        auth: process.env.NOTION_KEY, //Check whether you have the correct token in the .env.local file.
       })
       
-    const databaseId = "cb7872286310407cbe674ccd8a3ed2f7"
+    const databaseId = process.env.NOTION_DATABASE_ID
     try {
         const res = await notion.databases.query({
           database_id: databaseId,

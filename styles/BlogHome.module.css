@@ -82,7 +82,7 @@
         background: none;
     }
   }
-
+/*
 @media (prefers-color-scheme: dark) {
     .articlepreview {
       background-color: #141414 !important;
@@ -97,7 +97,7 @@
         color: white;
     }
 }
-
+*/
 @media (max-width: 500px) {
     .articlepreview {
         max-width: 90%;
