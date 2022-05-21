@@ -21,16 +21,8 @@
 .pagelink {
     font-family: "Inter";
     cursor: pointer;
-    
-    transition: all 500ms ease;
 }
 
-.pagelink:hover {
-    transform-origin: bottom right;
-    border-bottom-style: solid;
-    border-bottom-color: black;
-    border-bottom-width: 1.5px;
-}
 
 .menubtn {
     position: relative;

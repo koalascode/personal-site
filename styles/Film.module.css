@@ -1,0 +1,17 @@
+
+
+.video {
+    border-radius: 10px;
+}
+
+
+
+
+.videocontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 5rem;
+}

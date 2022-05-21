@@ -10,7 +10,7 @@
 }
 
 .wavehand {
-  animation: wavingAnimation 1.4s ease infinite;
+  animation: wavingAnimation 1s ease infinite;
   -webkit-animation-direction: alternate;
   margin-top: 1rem;
 }
@@ -178,12 +178,10 @@
 
 @keyframes wavingAnimation {
   from { 
-    transform: translate(5px, 5px);
-    transform: rotate(-15deg);
+    transform: rotate(20deg) translate(-10px, 0px);
   }
  to { 
-    transform: translate(0);
-    transform: rotate(0);
+    transform: rotate(0) translate(0);
   }
 }
 

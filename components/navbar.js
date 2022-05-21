@@ -36,7 +36,7 @@ export default function NavBar() {
         <h2 className={styles.headername}>Aaron Anidjar</h2>  
         </Link>
           <div className={styles.flexlinks}>
-              <Link href="/" passHref>
+              <Link href="/film" passHref>
                   <p className={styles.pagelink}>Filmmaking</p>
               </Link>
               <Link href="/" passHref>
