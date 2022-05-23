@@ -66,7 +66,10 @@ export default function Home({ properties, allprops }) {
       {allprops.results.map(prop => 
       
        <div className={styles.articlepreview} key={prop.properties.Tags.multi_select.map(x =>x.name)}>
+         <div className={styles.imgcontainer}>
          <Image className={styles.coverimage} src={`${prop?.properties?.Image?.files[0]?.name}`} width={700} height={500}/>
+        </div>
+         
        
          <div className={styles.tagsflex}>
            {prop.properties.Tags.multi_select.map(x => <p key={x?.name} className={styles.tag}><b style={{color: x.color}}># </b>{x.name}</p>)}

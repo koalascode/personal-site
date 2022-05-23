@@ -127,6 +127,13 @@
   text-align: center;
 }
 
+.imgcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .coverimage {
   border-radius: 15px;
 }
@@ -226,5 +233,11 @@
     width: 90%;
     margin: 0 auto;
     margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 2000px) {
+  .imgcontainer {
+    margin-top: 1rem;
   }
 }
