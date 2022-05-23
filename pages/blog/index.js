@@ -22,7 +22,7 @@ export default function BlogHome({properties, allprops}) {
         {allprops.results.map(prop => 
          <div key={`${prop?.properties?.Name?.title[0]?.plain_text}`} className={styles.articlepreview}>
             <div className={styles.maintext}>   
-                <Link href={`/articles/${prop?.id}`}>
+                <Link href={`/blog/${prop?.id}`}>
                     <div className={styles.articleteasertext}>
                         <p className={styles.blogdate}>{prop?.properties?.DatePublished?.date?.start}</p>
                         <h2 className={styles.blogtitle}>{prop?.properties?.Name?.title[0]?.plain_text}</h2>
