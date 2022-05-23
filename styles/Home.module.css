@@ -234,6 +234,10 @@
     margin: 0 auto;
     margin-bottom: 1rem;
   }
+
+  .fleximage {
+    min-width: 89%;
+  }
 }
 
 @media (min-width: 2000px) {
