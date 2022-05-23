@@ -57,7 +57,7 @@ export default function Home({ properties, allprops }) {
          <p></p> 
        </div>   
      </div>
-     <Image className={styles.fleximage} layout="raw" src="https://lh3.googleusercontent.com/pw/AM-JKLUR7z6iJH57jl8NRd1ShWteeFGNlyTNO1Ayc49tVOliA7f4UELSZp1jinokfTQjpte-mdZl6oRp1wkniFVBp7C9IGgrgXLGGrdMKKIhOVAWVt64SRpzwojh3Zo5eJ5nFnABd7dS863m9htwMsLQLXm2=w2160-h1440-no?authuser=0" width={600} height={400}/>
+     <Image className={styles.fleximage} layout="raw" src="https://lh3.googleusercontent.com/pw/AM-JKLUR7z6iJH57jl8NRd1ShWteeFGNlyTNO1Ayc49tVOliA7f4UELSZp1jinokfTQjpte-mdZl6oRp1wkniFVBp7C9IGgrgXLGGrdMKKIhOVAWVt64SRpzwojh3Zo5eJ5nFnABd7dS863m9htwMsLQLXm2=w2160-h1440-no?authuser=0" width={1200} height={800}/>
    </div>
 
    <div>
