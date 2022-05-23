@@ -3,7 +3,7 @@ import styles from '/styles/ArticleTemplate.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-
+import NavBar from '../../components/navbar'
 
 export default function Article({ allprops, pageprops }) {
     console.log(pageprops.results.map(x => x?.video?.external?.url))
@@ -27,9 +27,8 @@ export default function Article({ allprops, pageprops }) {
         <div>
             <title>{allprops.properties.Name.title[0].plain_text}</title>
             <link rel="icon" href="/blogicon.png"/>
-            <Link href="/blog" passHref>
-                <button className={styles.returnhomebutton}>⬅️ Blog Home</button>
-            </Link>
+            <NavBar />
+            <br />
             <div className={styles.allarticle}>
             <h1 className={styles.title}>{allprops.properties.Name.title[0].plain_text}</h1>
             <div className={styles.headerinfo}>
