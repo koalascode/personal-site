@@ -16,37 +16,28 @@ export default function BlogHome({properties, allprops}) {
       <title>Aaron Anidjar | Blog</title>
       <link rel="icon" href="/blogicon.png"/>
       <NavBar />
-        <h1 className={styles.header}>📝 My Blog</h1>
-        <div className={styles.filterbuttoncontainer}>
-        <form>
-          <select className={styles.filterbutton}>
-            <option value="writing">Writing</option>
-            <option value="programming">Programming</option>
-            <option value="filmmaking">Filmmaking</option>
-            <option value="resting">Testing</option>
-          </select>
-        </form>
-        </div>
+       
         
         <div className={styles.articlescontainer}>
         {allprops.results.map(prop => 
-         <div className={styles.articlepreview} >
-          <Image className={styles.coverimage} src={`${prop?.properties?.Image?.files[0]?.name}`} width={700} height={500}/>
-          
-          <div className={styles.tagsflex}>
-            {prop.properties.Tags.multi_select.map(x => <p className={styles.tag}><b style={{color: x.color}}># </b>{x.name}</p>)}
-          </div>
-        <Link href={`/blog/${prop?.id}`}>
-          <div className={styles.articleteasertext}>
-            <h2 className={styles.blogtitle}>{prop?.properties?.Name?.title[0]?.plain_text}</h2>
-            <p className={styles.blogdescription}>{prop?.properties?.Content?.rich_text[0]?.plain_text}</p>
-          </div>
-          </Link>
+         <div key={`${prop?.properties?.Name?.title[0]?.plain_text}`} className={styles.articlepreview}>
+            <div className={styles.maintext}>   
+                <Link href={`/articles/${prop?.id}`}>
+                    <div className={styles.articleteasertext}>
+                        <p className={styles.blogdate}>{prop?.properties?.DatePublished?.date?.start}</p>
+                        <h2 className={styles.blogtitle}>{prop?.properties?.Name?.title[0]?.plain_text}</h2>
+                        <p className={styles.blogdescription}>{prop?.properties?.Content?.rich_text[0]?.plain_text}</p>
+                    </div>
+                </Link>
+            </div>
+          <Image className={styles.coverimage} src={`${prop?.properties?.Image?.files[0]?.name}`} width={800} height={600} layout="raw"/>
+
           
          </div> 
       )}
             
         </div>
+      
         
     </div>
    )
