@@ -15,3 +15,10 @@
     gap: 2rem;
     margin-top: 5rem;
 }
+
+@media (max-width: 500px) {
+    .individualvideo {
+        max-width: 85%;
+        
+    }
+}
