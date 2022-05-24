@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 import NavBar from '../../components/navbar'
 
 export default function Article({ allprops, pageprops }) {
-    console.log(pageprops.results.map(x => x?.video?.external?.url))
+    console.log(pageprops.results)
     const items = pageprops.results.map(x => 
         <div key="test">
         {x.type === "heading_1" ? <h1 className={styles.h1}>{x.heading_1?.rich_text[0]?.plain_text}</h1> : null}
@@ -15,7 +15,9 @@ export default function Article({ allprops, pageprops }) {
         {x.type === "paragraph" ? <p className={styles.paragraph}>{x.paragraph?.rich_text[0]?.plain_text}</p> : null}
         <ul>
         {x.type === "bulleted_list_item" ? <li>{x?.bulleted_list_item?.rich_text[0]?.plain_text}</li> : null}
+        {x.type === "numbered_list_item" ? <li>{x?.numbered_list_item?.rich_text[0]?.plain_text}</li> : null}
         </ul>
+        
         {x.type === "to_do" ? <form><input type="checkbox"/><label>{x?.to_do?.rich_text[0].plain_text}</label></form> : null}
         {x.type === "quote" ? <p className={styles.quote}>&quot;{x?.quote?.rich_text[0]?.plain_text}&quot;</p> : null} 
         {x.type === "image" ? <div className={styles.imagediv}><img className={styles.articleimage} src={`${x.image?.file?.url}`}/></div> : null}
