@@ -56,11 +56,14 @@ export default function NavBar() {
           
         
             <div className={styles.navpop} id="navpopup">
-            <Link href="/" passHref>
+            <Link href="/film" passHref>
                   <h1 className={styles.bigpagelink}>Filmmaking</h1>
               </Link>
-              <Link href="/" passHref>
+              <Link href="/programming" passHref>
                   <h1 className={styles.bigpagelink}>Programming</h1>
+              </Link>
+              <Link href="/photo" passHref>
+                  <h1 className={styles.bigpagelink}>Photography</h1>
               </Link>
               <Link href="/blog" passHref>
                   <h1 className={styles.bigpagelink}>Blog</h1>
