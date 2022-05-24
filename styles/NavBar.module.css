@@ -82,16 +82,16 @@
 .navpop {
     display: none;
     text-align: center;
-    margin-top: 15rem;
-    margin-bottom: 12rem;
-
+    margin-top: 18rem;
+    margin-bottom: 18rem;
+    
 }
 
 .bigpagelink {
     margin-top: 2rem;
     margin-bottom: 2rem;
+    cursor: pointer;
 }
-
 
 @media (max-width: 500px) {
     .flexlinks {
