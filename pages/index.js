@@ -31,7 +31,7 @@ export default function Home({ properties, allprops }) {
    </div>
 
    <div className={styles.flexcontainer}>
-     <Image className={styles.fleximage} layout='raw' src="https://lh3.googleusercontent.com/Pee-dxhWWRzFXXpmbwFOTmSxyQuVkY28l41c0XbPGlXvn28QQykam4gul1TLjK2k9Dyz9_nV1dCXcVJ1oBFzXRYxwQqdkY9rN58Tf1QUtLaCF5zDJBCaCzvGODojr7vWfPZm3D5DKy7qMOY-7EuDWTIREJx2b-of7_ZG3ZmmXlQ93T8x_1fvW7BM_eIsTa0b_GkLRvoi0lMMz1ckIZFiCF-67kzOMCJY75wwksF7jURaKuldujvR7Sripnz3FOtLwKltFva7Zp9saLiwECnb_5zuHZZmLoUDhyFobmzvjcTM_hHMqbD1CBxeTqlSStPNpY7NU5-JFRre7HmgekwnD2qO4rjLcjPmrEs-aut9PNNdh6e1RGjrpG-TqX06qjLAJ0H-ta8FkbJmut5umyR1yq-Kr_eZnqtqfehypT0JGe3dX7wrKKpdaYeWZWvAZ-qeRsLGclQeUAEFEKfsg4CC_DzK5Sx-Xpuz0-Cf_uiTmDpPetnhSm5EKTFoXj_qpy7szkiwu4aCKWBfTwGPgPg4GD1t8jg2Gp84HV0CKeLzbtvTfc9gOrC60Jf2XEbnOlT9joqPklSvooQxMVxtZGP2R6NoW16XKu7yqBz9JMJHhDGI4FbB83adEzRFgNygWr5rSCREVsJC6zoiWP2jKUWJKaCVWa7CLHxr795x13VaxUr-iUYdcmhRW8j8Cmt8KPMUo5mLD6pWr0LZHqDZu4N63IsrFvOzWn6juCl-071ANVZyuZD8nVXNJP_49MtKgo2xLxlnS0FnJNkAy6mHzDIVtSTgUsF2xWs-7KGw=w2052-h1454-no?authuser=0" width={1200} height={800}/>
+     <Image className={styles.fleximage} layout='raw' src="/portfoliophoto.jpg" width={1200} height={800}/>
      <div className={styles.flextext}>
        <h1 className={styles.flextextheader}>Filmmaker</h1>
        <p className={styles.flexmaintext}>I have been filmmaking for 5 years now and have been recently enamored with investigative journalism. I love filming and editing these videos as well as scripting and planning.</p>
