@@ -1,0 +1,21 @@
+
+
+.content {
+    height: 100vh;
+    position: relative;
+  }
+  
+  .main {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .title {
+    cursor: pointer;
+  }
