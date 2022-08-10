@@ -3,8 +3,26 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import NavBar from '../components/navbar'
+import { useEffect } from 'react'
 
 export default function Home({ properties, allprops }) {
+
+  useEffect(() => {
+    let i = 0
+    let txt = "Hello"
+    let speed = 150
+
+    function typeWriter() {
+      if (i < txt.length) {
+        document.getElementById("header").innerHTML += txt.charAt(i)
+        i++;
+        setTimeout(typeWriter, speed)
+      }
+    }
+    typeWriter()
+    
+  })
+
   return (
     <div className={styles.container}>
         <title>Aaron Anidjar | Home</title>
@@ -17,7 +35,7 @@ export default function Home({ properties, allprops }) {
      
      <div className={styles.hellocontainer}>
      <img className={styles.wavehand} src="/wave.png" height={50} width={50}/>
-     <h1 className={styles.header}>Hello</h1>
+     <h1 className={styles.header} id="header"></h1>
      </div>
     
      <a href="#intro">

@@ -182,8 +182,6 @@
 
 
 
-
-
 @keyframes wavingAnimation {
   from { 
     transform: rotate(20deg) translate(-10px, -5px);
@@ -193,17 +191,7 @@
   }
 }
 
-.header{animation: 1.5s ease-in 0s FadeIn}
-@keyframes FadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-}
-
-.downarrow {animation: 4s ease-in 0s FadeIn;}
+.downarrow {animation: 2s ease-in 0s FadeIn;}
 @keyframes FadeIn {
     0% {
       opacity:0;
