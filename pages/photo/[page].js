@@ -10,8 +10,11 @@ export default function PhotoMain() {
     const [modalPath, setModalPath] = useState()
     const router = useRouter()
     const query = router.query
+    console.log(query)
     const page = query.page
-    let pageHeader = page[0].toUpperCase() + page.slice(1)
+    let pageHeader = ""
+    page ? pageHeader = page[0].toUpperCase() + page.slice(1) : null;
+    
     page == "cr" ? pageHeader = "Costa Rica" : null;
     
 
@@ -53,7 +56,7 @@ export default function PhotoMain() {
             </Head>
             <NavBar />
             <div>
-                <h1 className={styles.header}>{pageHeader}</h1>
+                <h1 className={styles.header}>{page == undefined ? "...": pageHeader}</h1>
                 <p className={styles.description}>{description[page]}</p>
             </div>
             <div className={styles.flex}>
