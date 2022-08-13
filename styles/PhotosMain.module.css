@@ -31,6 +31,7 @@
     background: none;
     padding: 0;
     height: auto;
+    min-width: 45%;
 }
 
 .modalcontainer::backdrop {
@@ -53,5 +54,10 @@
         grid-template-columns: 90%;
         padding-left: 2rem;
         gap: 0rem;
+    }
+
+    .description {
+        max-width: 90%;
+        
     }
 }
