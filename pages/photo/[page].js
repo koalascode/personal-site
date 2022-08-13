@@ -62,7 +62,7 @@ export default function PhotoMain() {
             </div>
             </div>
             <dialog className={styles.modalcontainer} id="imgmodal">
-                <button onClick={closeModal}>x</button>
+                <button onClick={closeModal} className={styles.closebutton}>x</button>
                 <Image id="modalimg" src={modalPath == undefined ? "/acadia/acadiafinal-1" : modalPath} className={styles.img} width={600} height={400} layout='raw'/>
             </dialog>
            
