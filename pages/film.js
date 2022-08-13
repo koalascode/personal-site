@@ -16,6 +16,11 @@ export default function Film() {
 
             <div className={styles.videocontainer}>
                 <div className={styles.individualvideo}>
+                <iframe className={styles.video} width={560} height={315} src="https://www.youtube.com/embed/yAPgEoZibNI" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                <h2>China</h2>
+                <p className={styles.videodescription}>Investigative piece on China&apos;s lending around the world.</p>
+                </div>
+                <div className={styles.individualvideo}>
                 <iframe className={styles.video} width={560} height={315} src="https://www.youtube.com/embed/3O6hal7pzaI" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 <h2>Iceland</h2>
                 <p className={styles.videodescription}>An investigative piece about Iceland&apos;s economy and why the nation is so rich.</p>

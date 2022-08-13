@@ -1,0 +1,46 @@
+.header, .description {
+    text-align: center;
+}
+
+
+
+.description {
+    font-weight: 300;
+    max-width: 50ch;
+    margin: 1rem auto;
+    
+}
+
+.imgcontainer {
+    display: grid;
+    justify-items: center;
+    padding-left: 8rem;
+    width: 100%;
+    grid-template-columns: 45% 45%;
+    gap: 2rem;
+}
+
+.img {
+    width: 100%;
+    height: auto;
+    padding: 1rem 0rem;
+}
+
+.modalcontainer {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(213, 213, 213);
+    padding: 0;
+    height: auto;
+}
+
+
+@media (max-width: 550px) {
+    .imgcontainer {
+        grid-template-columns: 90%;
+        padding-left: 2rem;
+        gap: 0rem;
+    }
+}
