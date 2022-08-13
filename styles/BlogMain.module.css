@@ -1,0 +1,10 @@
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(50%);
+}
+
+.title {
+    cursor: pointer;
+}
