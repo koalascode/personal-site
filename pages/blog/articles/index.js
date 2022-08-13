@@ -7,8 +7,8 @@ import NavBar from '../../../components/navbar'
 
 
 export default function BlogHome({properties, allprops}) {
-    const title = properties.map(x => x.Name.title[0].plain_text);
-    console.log(properties.map(x => x))
+    const title = properties.map(x => x);
+    console.log(properties.map(x => x.Image.url))
     //console.log(allprops.results.map(x => x.properties.Tags.multi_select.map(w => w.name)))
 
    return (
@@ -30,7 +30,7 @@ export default function BlogHome({properties, allprops}) {
                     </div>
                 </Link>
             </div>
-          <Image className={styles.coverimage} src={`${prop?.properties?.Image?.files[0]?.name}`} width={800} height={600} layout="raw"/>
+          <Image className={styles.coverimage} src={`${prop?.properties?.Image?.url}`} width={800} height={600} layout="raw"/>
 
           
          </div> 
