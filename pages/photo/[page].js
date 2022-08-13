@@ -10,7 +10,6 @@ export default function PhotoMain() {
     const [modalPath, setModalPath] = useState()
     const router = useRouter()
     const query = router.query
-    console.log(query)
     const page = query.page
     let pageHeader = ""
     page ? pageHeader = page[0].toUpperCase() + page.slice(1) : null;
@@ -31,7 +30,6 @@ export default function PhotoMain() {
 
     const fileArr = []
     for (let i = 1; i < length[page]; i++) {
-        console.log(path[page] + `${i}`)
         fileArr.push(path[page] + i)
     }
     
