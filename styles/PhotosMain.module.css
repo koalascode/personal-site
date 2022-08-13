@@ -29,11 +29,18 @@
 .modalcontainer {
     border: none;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     background-color: rgb(213, 213, 213);
     padding: 0;
     height: auto;
+}
+
+.modalcontainer::backdrop {
+    background: black;
+    opacity: .5;
+    border-radius: 10px;
 }
 
 

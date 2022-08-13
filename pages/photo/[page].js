@@ -39,6 +39,10 @@ export default function PhotoMain() {
         setModalPath(path)
     }
 
+    const closeModal = () => {
+        document.getElementById("imgmodal").close() 
+    }
+
    
 
     return (
@@ -54,10 +58,11 @@ export default function PhotoMain() {
             </div>
             <div className={styles.flex}>
             <div className={styles.imgcontainer}>
-                {fileArr.map(file => <Image className={styles.img} src={`${file}.jpg`} onClick={handleModal} key={useId()} width={600} height={500} layout='raw'/>)}
+                {fileArr.map(file => <Image className={styles.img} src={`${file}.jpg`} onClick={handleModal} key={file} width={600} height={500} layout='raw'/>)}
             </div>
             </div>
             <dialog className={styles.modalcontainer} id="imgmodal">
+                <button onClick={closeModal}>x</button>
                 <Image id="modalimg" src={modalPath == undefined ? "/acadia/acadiafinal-1" : modalPath} className={styles.img} width={600} height={400} layout='raw'/>
             </dialog>
            
