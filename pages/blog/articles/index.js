@@ -7,8 +7,8 @@ import NavBar from '../../../components/navbar'
 
 
 export default function BlogHome({properties, allprops}) {
-    const title = properties.map(x => x);
-    console.log(properties.map(x => x.Image.url))
+    //const title = properties.map(x => x);
+    //console.log(properties.map(x => x.Image.url))
     //console.log(allprops.results.map(x => x.properties.Tags.multi_select.map(w => w.name)))
 
    return (
