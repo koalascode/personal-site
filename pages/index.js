@@ -85,7 +85,7 @@ export default function Home({ properties, allprops }) {
       
        <div className={styles.articlepreview} key={prop.properties.Tags.multi_select.map(x =>x.name)}>
          <div className={styles.imgcontainer}>
-         <Image className={styles.coverimage} src={`${prop?.properties?.Image?.files[0]?.name}`} width={700} height={500}/>
+         <Image className={styles.coverimage} src={`${prop?.properties?.Image?.url}`} width={700} height={500}/>
         </div>
          
        
