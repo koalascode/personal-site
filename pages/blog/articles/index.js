@@ -6,7 +6,7 @@ import Link from 'next/link'
 import NavBar from '../../../components/navbar'
 
 
-export default function BlogHome({properties, allprops, rightSideProps}) {
+export default function BlogHome({properties, allprops, rightSideProps, dailyProps}) {
 
  return (
   <div className={styles.container}>
@@ -15,6 +15,22 @@ export default function BlogHome({properties, allprops, rightSideProps}) {
     <link rel="icon" href="/favicon.png"/>
       
       <div className={styles.articlescontainer}>
+      <div className={styles.leftarticles}>
+        <h3 className={styles.randomideasheader}>Random Ideas:</h3>
+  {dailyProps.results.map(prop => 
+     <div key={`${prop?.properties?.Name?.title[0]?.plain_text}`} className={styles.sidearticlepreview}>
+     <div className={styles.maintext}>   
+         <Link href={`/blog/articles/${prop?.id}`}>
+             <div className={styles.articleteasertext}>
+                 <p className={styles.blogdate}>{prop?.properties?.DatePublished?.date?.start}</p>
+                 <h2 className={styles.blogtitle}>{prop?.properties?.Name?.title[0]?.plain_text}</h2>
+                 <p className={styles.blogdescription}>{prop?.properties?.Content?.rich_text[0]?.plain_text}</p>
+             </div>
+         </Link>
+     </div>
+  </div> 
+  )}
+  </div>
       <div className={styles.mainarticles}>
       {allprops.results.map(prop => 
        <div key={`${prop?.properties?.Name?.title[0]?.plain_text}`} className={styles.articlepreview}>
@@ -37,7 +53,7 @@ export default function BlogHome({properties, allprops, rightSideProps}) {
         
        </div> 
     )}
-      </div>
+    </div>
     <div className={styles.rightarticles}>       
     {rightSideProps.results.map(prop => 
      <div key={`${prop?.properties?.Name?.title[0]?.plain_text}`} className={styles.sidearticlepreview}>
@@ -55,14 +71,13 @@ export default function BlogHome({properties, allprops, rightSideProps}) {
              </div>
          </Link>
      </div>
-     <Image className={styles.coverimage} src={`${prop?.properties?.Image?.url}`} width={800} height={600} layout='raw'/>
   
    
   </div> 
   )}
     </div>
           
-      </div>
+    </div>
       
   </div>
  )
@@ -110,10 +125,26 @@ export async function getServerSideProps() {
     ] 
       });
 
+      const daily = await notion.databases.query({
+        database_id: databaseId,
+        "filter": {
+          "property": 'Status', 
+          "multi_select": {
+            "contains": "Daily"
+        }
+       },
+       "sorts": [
+        {
+            "property": "DatePublished",
+            "direction": "descending"
+        }
+    ] 
+      });
+
 
       const properties = res.results.map(x => x.properties) //Returns id
       return {
-        props: {properties: properties, allprops: res, rightSideProps: rs}
+        props: {properties: properties, allprops: res, rightSideProps: rs, dailyProps: daily}
       } 
     }
     catch (e) {
