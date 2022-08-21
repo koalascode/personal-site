@@ -19,7 +19,7 @@ export default function BlogHome({properties, allprops, rightSideProps}) {
       {allprops.results.map(prop => 
        <div key={`${prop?.properties?.Name?.title[0]?.plain_text}`} className={styles.articlepreview}>
           <div className={styles.maintext}>   
-              <Link href={`/articles/${prop?.id}`}>
+              <Link href={`/blog/articles/${prop?.id}`}>
                   <div className={styles.articleteasertext}>
                       <p className={styles.blogdate}>{prop?.properties?.DatePublished?.date?.start}</p>
                     {prop?.properties?.CreatedBy.people.map(x => 
@@ -42,7 +42,7 @@ export default function BlogHome({properties, allprops, rightSideProps}) {
     {rightSideProps.results.map(prop => 
      <div key={`${prop?.properties?.Name?.title[0]?.plain_text}`} className={styles.sidearticlepreview}>
      <div className={styles.maintext}>   
-         <Link href={`/articles/${prop?.id}`}>
+         <Link href={`/blog/articles/${prop?.id}`}>
              <div className={styles.articleteasertext}>
                  <p className={styles.blogdate}>{prop?.properties?.DatePublished?.date?.start}</p>
                {prop?.properties?.CreatedBy.people.map(x => 
