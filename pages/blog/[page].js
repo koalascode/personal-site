@@ -3,7 +3,7 @@ import styles from '/styles/ArticleTemplate.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import NavBar from '../../../components/navbar'
+import NavBar from '../../components/navbar'
 
 export default function Article({ allprops, pageprops }) {
     console.log(pageprops.results)
@@ -29,7 +29,7 @@ export default function Article({ allprops, pageprops }) {
                 <title>{allprops.properties.Name.title[0].plain_text}</title>
                 <link rel="icon" href="/blogicon.png"/>
             </Head>
-            <Link href="/blog/articles" passHref>
+            <Link href="/blog" passHref>
                 <button className={styles.returnhomebutton}>⬅️ Blog Home</button>
             </Link>
             <div className={styles.allarticle}>
