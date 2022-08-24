@@ -1,32 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap');
 
+.container {
+    background-color: #FFFFFF;
+    min-height: 100vh;
 
-.allarticle {
-    margin-top: -1rem;
+}
+
+.cwlogocontainer {
+    padding-top: 0.5rem;
+    padding-left: 2rem;
+    cursor: pointer;
+}
+
+.cwlogocontainer:hover {
+    color: rgb(0, 81, 255);
+    text-decoration: underline;
+}
+
+.bloghometxt {
+    padding-left: 1rem;
 }
 
 .title {
-    text-align: center;
+    font-weight: 500;
+    font-size: 2.25rem;
+}
+
+.accenttext {
+    color: #2a85c1;
+    font-weight: 500;
+}
+
+.header {
+    max-width: 45%;
+    display: block;
+    margin: 0 auto;
+    border-bottom: .4px solid rgb(85, 85, 85);
+}
+
+.coverimage {
+    max-width: 100%;
+    height: auto;
+}
+
+.indicatorhead {
+    margin-bottom: -1rem;
 }
 
 .writer {
     display: flex; 
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
+    margin-top: -1.25rem;
 }
 
 .writeravater {
     border-radius: 50%;
-    transform: scale(.88);
+    transform: scale(.75);
+    -ms-transform: scale(.75);
+}
+
+.editorsmain {
+    display: flex;
+    gap: 1rem
+}
+
+.editors {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.editorhead, .editorsname{
+    transform: translateY(.5rem);
+}
+
+.editorhead {
+    text-align: center;
+}
+
+.editorflex {
+    display: flex;
+    justify-content: center;
+}
+
+.editoravatar {
+    border-radius: 50%;
+    transform: scale(.65);
+    -ms-transform: scale(.65);
 }
 
 .publisheddate {
-    text-align: center;
     font-family: "Inter"
 }
 
-
-.quote{
+.quote {
     border-left: 1px white solid;
     margin-left: 1rem;
     padding-left: .5rem;
@@ -34,9 +101,9 @@
 }
 
 .articlemain {
-    max-width: 65%;
+    max-width: 50%;
     margin: 0 auto;
-    
+    initial-letter: 2;
 }
 
 .imagediv {
@@ -46,6 +113,7 @@
 
 .articleimage {
     width: 76%;
+    height: auto;
 }
 
 .returnhomebutton {
@@ -53,17 +121,44 @@
     margin-left: 1rem;
     border: none;
     background: none;
+    cursor: pointer;
+}
+
+.returnhomebutton:hover {
+    text-decoration: underline;
+}
+
+.hypertextp {
+    color: rgb(7, 73, 255);
+    cursor: pointer;
+}
+
+.hypertextp:hover {
+    text-decoration: underline;
 }
 
 .paragraph {
     line-height: 2rem;
-    text-indent: 3rem;
     font-family: "Inter";
     font-weight: 300;
+    font-size: 1rem;
 }
+
+.articlevideo {
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+    max-width: 90%;
+    max-height: auto
+}
+
 
 @media (max-width: 500px) {
     .articlemain {
         max-width: 90%;
+    }
+
+    .header {
+        max-width: 80%;
     }
 }

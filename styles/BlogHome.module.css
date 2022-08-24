@@ -5,7 +5,7 @@
 .articlescontainer {
     margin-top: 2rem;
     display: grid;
-    grid-template-columns: 20% 60% 20%;
+    grid-template-columns: 30% 70%;
 }
 
 .mainarticles {

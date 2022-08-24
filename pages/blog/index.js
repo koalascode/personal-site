@@ -18,7 +18,7 @@ export default function BlogHome({properties, allprops, rightSideProps, dailyPro
       
       <div className={styles.articlescontainer}>
       <div className={styles.leftarticles}>
-        <h3 className={styles.randomideasheader}>Random Ideas:</h3>
+        <p className={styles.randomideasheader}>Ideas that Invigorate (hopefully):</p>
   {dailyProps.results.map(prop => 
      <div key={`${prop?.properties?.Name?.title[0]?.plain_text}`} className={styles.sidearticlepreview}>
      <div className={styles.maintext}>   
@@ -55,28 +55,6 @@ export default function BlogHome({properties, allprops, rightSideProps, dailyPro
         
        </div> 
     )}
-    </div>
-    <div className={styles.rightarticles}>       
-    {rightSideProps.results.map(prop => 
-     <div key={`${prop?.properties?.Name?.title[0]?.plain_text}`} className={styles.sidearticlepreview}>
-     <div className={styles.maintext}>   
-         <Link href={`/blog/${prop?.id}`}>
-             <div className={styles.articleteasertext}>
-                 <p className={styles.blogdate}>{prop?.properties?.DatePublished?.date?.start}</p>
-               {prop?.properties?.CreatedBy.people.map(x => 
-                 <div key={x.name} className={styles.writer}>
-                   <Image className={styles.writeravater} src={x.avatar_url} width={60} height={60}/>
-                   <h3 key={x.name} className={styles.writername}>{x.name}</h3>
-                 </div>)}
-                 <h2 className={styles.blogtitle}>{prop?.properties?.Name?.title[0]?.plain_text}</h2>
-                 <p className={styles.blogdescription}>{prop?.properties?.Content?.rich_text[0]?.plain_text}</p>
-             </div>
-         </Link>
-     </div>
-  
-   
-  </div> 
-  )}
     </div>
           
     </div>
