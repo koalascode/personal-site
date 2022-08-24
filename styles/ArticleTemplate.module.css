@@ -3,11 +3,11 @@
 .container {
     background-color: #FFFFFF;
     min-height: 100vh;
-
+    
 }
 
 .cwlogocontainer {
-    padding-top: 0.5rem;
+    padding-top: 0rem;
     padding-left: 2rem;
     cursor: pointer;
 }
