@@ -23,6 +23,9 @@
     cursor: pointer;
 }
 
+.pagelink:hover {
+    text-decoration: underline;
+}
 
 .menubtn {
     position: relative;

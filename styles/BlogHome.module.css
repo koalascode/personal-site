@@ -71,7 +71,13 @@
 .blogtitle {
     font-size: 2.5rem;
     margin-top: 0;
-    font-family: "Inter"
+    font-family: "Inter";
+    transition: all 200ms ease;
+}
+
+.blogtitle:hover {
+    color: rgb(42, 83, 247);
+    text-decoration: underline;
 }
 
 .blogdescription {
