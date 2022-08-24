@@ -27,7 +27,7 @@ export default function Article({ allprops, pageprops }) {
         <div className={styles.container}>
             <Head>
                 <title>{allprops.properties.Name.title[0].plain_text}</title>
-                <link rel="icon" href="/greencwlogo.png"/>
+                <link rel="icon" href="/blogicon.png"/>
             </Head>
             <Link href="/blog" passHref>
                 <p className={styles.bloghometxt}>← Blog Home</p>
