@@ -27,15 +27,14 @@ export default function Home({ properties, allprops }) {
     <div className={styles.container}>
         <title>Aaron Anidjar | Home</title>
         <link rel="icon" href="/favicon.png"/>
-        <NavBar />
+        <NavBar allprops={allprops} properties={properties}/>
       <div className={styles.main}>
 
 
       <div className={styles.sectiononetext}>
      
      <div className={styles.hellocontainer}>
-     <img className={styles.wavehand} src="/wave.png" height={50} width={50}/>
-     <h1 className={styles.header} id="header"></h1>
+     <h1 className={styles.header} id="header">👋 </h1>
      </div>
     
      <a href="#intro">
@@ -82,7 +81,6 @@ export default function Home({ properties, allprops }) {
      <h2 className={styles.blogshead}>Latest Blog Posts:</h2>
      <div className={styles.articlescontainer}>
       {allprops.results.map(prop => 
-      
        <div className={styles.articlepreview} key={prop.properties.Tags.multi_select.map(x =>x.name)}>
          <div className={styles.imgcontainer}>
          <Image className={styles.coverimage} src={`${prop?.properties?.Image?.url}`} width={700} height={500}/>

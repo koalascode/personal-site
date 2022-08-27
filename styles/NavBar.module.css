@@ -1,7 +1,11 @@
+.container {
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
 .main {
     display: flex;
 }
-
 
 .headername {
     font-family: "Inter";
@@ -110,4 +114,136 @@
         margin-right: 1rem;
     }
     
+}
+
+.articlepreview {
+    max-width: 30%;
+    margin: 0 1rem;
+}
+
+.mainarticles {
+    display: none;
+}
+
+.coverimage {
+    max-width: 100%;
+    border-radius: 10px;
+    height: auto;
+}
+
+.blogtitle {
+    font-size: 1.7rem;
+    margin-top: 0;
+    font-family: "Inter";
+    transition: all 200ms ease;
+    cursor: pointer;
+}
+
+.blogtitle:hover {
+    color: rgb(42, 83, 247);
+    text-decoration: underline;
+}
+
+.blogdescription {
+    font-size: 0.8rem;
+}
+
+.filmpreview {
+    display: none;
+}
+
+.individualvideo {
+    margin: 0rem 2rem;
+}
+
+.programmingpreview {
+    display: none;
+    gap: 2rem;
+    margin-left: 2rem;
+}
+
+.project {
+    max-width: 30%;
+}
+
+.sideimage {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.photospreview {
+    display: none;
+    gap: 0.5rem;
+}
+
+.instruction {
+    text-align: center;
+    font-weight: 300;
+    font-size: 0.8rem;
+}
+
+.photocontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    text-align: center;
+    font-family: "Inter";
+}
+
+.image {
+    max-width: 40%;
+    height: auto;
+    /*border-radius: 10px;*/
+}
+
+.indivcontainer {
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
+
+.displayimg {
+    opacity: 1;
+    transition: opacity 500ms ease;
+}
+
+.displayimg:hover {
+    opacity: 0.5;
+}
+
+.headtext {
+    color: rgb(0, 0, 0);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 500ms ease;
+}
+
+.indivcontainer:hover > h1 {
+    opacity: 1;
+}
+
+
+@media (max-width: 500px) {
+    .image {
+        max-width: 90% !important;
+    }
+
+    .displayimg {
+        opacity: 0.6;
+    }
+
+    .headtext {
+        opacity: 1;
+    }
 }

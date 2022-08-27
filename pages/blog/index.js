@@ -6,7 +6,7 @@ import Link from 'next/link'
 import NavBar from '../../components/navbar'
 
 
-export default function BlogHome({properties, allprops, rightSideProps, dailyProps}) {
+export default function BlogHome({properties, allprops, dailyProps}) {
 
  return (
   <div className={styles.container}>
@@ -89,22 +89,6 @@ export async function getServerSideProps() {
     ] 
       });
 
-      const rs = await notion.databases.query({
-        database_id: databaseId,
-        "filter": {
-          "property": 'Status', 
-          "multi_select": {
-            "contains": "RS"
-        }
-       },
-       "sorts": [
-        {
-            "property": "DatePublished",
-            "direction": "descending"
-        }
-    ] 
-      });
-
       const daily = await notion.databases.query({
         database_id: databaseId,
         "filter": {
@@ -124,7 +108,7 @@ export async function getServerSideProps() {
 
       const properties = res.results.map(x => x.properties) //Returns id
       return {
-        props: {properties: properties, allprops: res, rightSideProps: rs, dailyProps: daily}
+        props: {properties: properties, allprops: res, dailyProps: daily}
       } 
     }
     catch (e) {
