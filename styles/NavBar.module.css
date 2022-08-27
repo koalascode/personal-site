@@ -101,6 +101,10 @@
 }
 
 @media (max-width: 500px) {
+    .container {
+        box-shadow: none;
+        
+    }
     .flexlinks {
         display: none;
     }

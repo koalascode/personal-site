@@ -207,7 +207,9 @@
 }
 
 @media (max-width: 500px) {
-
+  .container {
+    background-color: white;
+  }
   .main {
     margin-top: -7rem;
   }
