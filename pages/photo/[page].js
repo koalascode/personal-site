@@ -25,8 +25,8 @@ export default function PhotoMain() {
     const assateaguedesc = "Assateague is a lesser known location than the rest, being located on the coast of Maryland, but it is impressive for it's wild horses and natural beauty. We went camping and were hence able to wake up early to see the horses."
 
     const description = {"hawaii": hawaiidesc, "iceland": icelanddesc, "acadia": acadiadesc, "assateague": assateaguedesc, "cr": crdesc, "utah": utahdesc}
-    const path = {"hawaii": "/hawaiibestphotos", "iceland": "/icelandbestphoto", "acadia": "/acadia/acadiafinal-", "assateague": "/assateague/assateaguefinal-", "cr": "/cr/crfinal-", "utah": "/utah/arizonafinal-"}
-    const length = {"hawaii": 8, "iceland": 10, "acadia": 37, "assateague": 19, "cr": 19, "utah": 53}
+    const path = {"hawaii": "/hawaiibestphotos", "iceland": "/iceland/icelandfinal-", "acadia": "/acadia/acadiafinal-", "assateague": "/assateague/assateaguefinal-", "cr": "/cr/crfinal-", "utah": "/utah/arizonafinal-"}
+    const length = {"hawaii": 8, "iceland": 57, "acadia": 37, "assateague": 19, "cr": 19, "utah": 53}
 
     const fileArr = []
     for (let i = 1; i < length[page]; i++) {

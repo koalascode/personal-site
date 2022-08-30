@@ -3,11 +3,14 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import styles from '../styles/NavBar.module.css'
+import { useRouter } from 'next/router'
 
 
 export default function NavBar({ allprops, properties }) {
     const [menuStatus, setMenuStatus] = useState()
     const [currentHover, setCurrentHover] = useState()
+
+    const router = useRouter()
 
     const toggleMenu = () => {
         menuStatus === undefined ? setMenuStatus("open") : null;
@@ -27,9 +30,9 @@ export default function NavBar({ allprops, properties }) {
         }
 
        
-        currentHover === "blog" ? document.getElementById("articlespreview").style.display = "flex" :document.getElementById("articlespreview").style.display = "none";
-        currentHover === "film" ? document.getElementById("filmpreview").style.display = "flex" :document.getElementById("filmpreview").style.display = "none";
-        currentHover === "photo" ? document.getElementById("photospreview").style.display = "flex" : document.getElementById("photospreview").style.display = "none";
+        currentHover === "blog" && router.route !== "/blog" ? document.getElementById("articlespreview").style.display = "flex" :document.getElementById("articlespreview").style.display = "none";
+        currentHover === "film" && router.route !== "/film"  ? document.getElementById("filmpreview").style.display = "flex" :document.getElementById("filmpreview").style.display = "none";
+        currentHover === "photo" && !router.route.includes("/photo") ? document.getElementById("photospreview").style.display = "flex" : document.getElementById("photospreview").style.display = "none";
     })    
     console.log(currentHover)
     return (
@@ -46,7 +49,7 @@ export default function NavBar({ allprops, properties }) {
                   <p onMouseEnter={() => setCurrentHover("programming")} onMouseLeave={() => setCurrentHover("none")} className={styles.pagelink}>Programming</p>
               </Link>
               <Link href="/photo" passHref>
-                  <p onMouseOver={() => setCurrentHover("photo")} className={styles.pagelink}>Photography</p>
+                  <p onMouseOver={() => setCurrentHover("photo")} className={styles.pagelink}>Outdoor Photos</p>
               </Link>
               <Link href="/blog" passHref>
                   <p onMouseEnter={() => setCurrentHover("blog")} className={styles.pagelink}>Blog</p>
@@ -116,7 +119,7 @@ export default function NavBar({ allprops, properties }) {
                   <h1 className={styles.bigpagelink}>Programming</h1>
               </Link>
               <Link href="/photo" passHref>
-                  <h1 className={styles.bigpagelink}>Photography</h1>
+                  <h1 className={styles.bigpagelink}>Outdoor Photography</h1>
               </Link>
               <Link href="/blog" passHref>
                   <h1 className={styles.bigpagelink}>Blog</h1>

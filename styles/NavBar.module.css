@@ -154,10 +154,17 @@
 
 .filmpreview {
     display: none;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .individualvideo {
-    margin: 0rem 2rem;
+    max-width: 40%;
+}
+
+.video {
+    max-width: 100%;
+    max-height: auto;
 }
 
 .programmingpreview {
@@ -179,6 +186,7 @@
 .photospreview {
     display: none;
     gap: 0.5rem;
+    margin: 0 1rem;
 }
 
 .instruction {
