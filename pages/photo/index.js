@@ -22,7 +22,7 @@ export default function Photo() {
                 </Link>
                 <Link href="/photo/iceland" passHref>
                 <div className={styles.indivcontainer}>
-                    <Image src="/icelandbestphoto9.jpg" className={styles.displayimg} width={600} height={400}/>
+                    <Image src="/iceland/icelandfinal-6.jpg" className={styles.displayimg} width={600} height={400}/>
                     <h1 className={styles.headtext}>Iceland</h1>
                 </div>
                 </Link>
